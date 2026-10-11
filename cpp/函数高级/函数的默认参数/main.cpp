@@ -1,4 +1,5 @@
 #include <iostream>
+
 //在C++中，函数的形参列表中的形参是可以有默认值的。
 int func(int a, int b = 2, int c = 10, int d = 5) 
 {
