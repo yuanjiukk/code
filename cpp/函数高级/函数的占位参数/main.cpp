@@ -1,4 +1,4 @@
-#nclude <iostream>
+#include <iostream>
 
 //C++中函数的形参列表里可以有占位参数，用来占位，调用函数时必须填补该位置
 
