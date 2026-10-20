@@ -172,6 +172,9 @@ int main() {
             break;
         }
         tree.insert(key);
+        std::cout << std::endl;
+        tree.printTree(tree.root);
+        std::cout << std::endl;
         tree.printTreeShape(tree.root);
         std::cout << std::endl;
     }
