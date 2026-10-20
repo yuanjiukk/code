@@ -149,13 +149,15 @@ public:
 
 int main() {
     RedBlackTree tree;
-    tree.insert(10);
-    tree.insert(5);
-    tree.insert(15);
-    tree.insert(3);
-    tree.insert(7);
-    tree.insert(12);
-    tree.insert(18);
+    int key;
+    std::cout << "请输入要插入的数字（0结束）：" << std::endl;
+    while (true) {
+        std::cin >> key;
+        if (key == 0) {
+            break;
+        }
+        tree.insert(key);
+    }
 
     std::cout << "     10 (0)" << std::endl;
     std::cout << "   /   \\ " << std::endl;
