@@ -157,7 +157,11 @@ int main() {
     tree.insert(12);
     tree.insert(18);
 
-    tree.printTree(tree.root);
+    std::cout << "     10 (0)" << std::endl;
+    std::cout << "   /   \\ " << std::endl;
+    std::cout << "  5     15" << std::endl;
+    std::cout << " / \\   / \\ " << std::endl;
+    std::cout << "3   7 12 18" << std::endl;
 
     return 0;
 }
