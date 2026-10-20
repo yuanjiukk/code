@@ -145,25 +145,36 @@ public:
             printTree(node->left, level + 1);
         }
     }
+
+    void printTreeShape(Node* node, int level = 0) {
+        if (node != nullptr) {
+            printTreeShape(node->right, level + 1);
+            for (int i = 0; i < level; i++) {
+                std::cout << "  ";
+            }
+            std::cout << "/" << std::endl;
+            printTreeShape(node->left, level + 1);
+            for (int i = 0; i < level; i++) {
+                std::cout << "  ";
+            }
+            std::cout << "\\" << std::endl;
+        }
+    }
 };
 
 int main() {
     RedBlackTree tree;
     int key;
-    std::cout << "请输入要插入的数字（0结束）：" << std::endl;
+    std::cout << "请输入要插入的数字（e结束）：" << std::endl;
     while (true) {
         std::cin >> key;
-        if (key == 0) {
+        if (key == 'e') {
             break;
         }
         tree.insert(key);
+        tree.printTreeShape(tree.root);
+        std::cout << std::endl;
     }
-
-    std::cout << "     10 (0)" << std::endl;
-    std::cout << "   /   \\ " << std::endl;
-    std::cout << "  5     15" << std::endl;
-    std::cout << " / \\   / \\ " << std::endl;
-    std::cout << "3   7 12 18" << std::endl;
 
     return 0;
 }
