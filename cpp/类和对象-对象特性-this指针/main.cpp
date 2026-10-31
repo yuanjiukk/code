@@ -2,8 +2,7 @@
 
 class Person {
 public:
-    Person(int age)
-    {
+    Person(int age) {
         //this指针指向 被调用的成员函数 所属的对象
         this->age = age;
     }
